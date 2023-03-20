@@ -1,0 +1,61 @@
+<div class='sign-up-container-full-body ct3'>
+  <div class='sign-up-header ct3'>
+    <div class='sign-up-header-logo'>
+      <img
+        src='https://cdn-icons-png.flaticon.com/512/2050/2050106.png'
+        alt=''
+      />
+    </div>
+    <div class='sign-up-header-content'>
+      <div class='header-title'>Welcome!</div>
+    </div>
+  </div>
+  <div class='sign-up-body ct3'>
+    <input
+      type='text'
+      value={{this.userName}}
+      {{on 'change' this.updateUserName}}
+      name='userName'
+      id=''
+      placeholder='UserName'
+    />
+    <input
+      type='email'
+      value={{this.email}}
+      {{on 'change' this.updateEmail}}
+      name='email'
+      id=''
+      placeholder='emailId@gmail.com'
+    />
+    <input
+      type='number'
+      value={{this.mobileNo}}
+      {{on 'change' this.updateMobileNo}}
+      name='mobile'
+      id=''
+      placeholder='Mobile number'
+    />
+    <input
+      type='password'
+      value={{this.password}}
+      {{on 'change' this.updatePassword}}
+      name='password'
+      id=''
+      placeholder='Password'
+    />
+    <input
+      type='password'
+      name='Confirm password'
+      value={{this.confirmedPass}}
+      {{on 'change' this.updateConfirmedPass}}
+      id=''
+      placeholder='Confirm password'
+    />
+    <button class='submit-btn' {{on 'click' this.createUser}} type='button'>SIGN
+      UP</button>
+  </div>
+  <div class='login-link'>
+    Already have an account?
+    <LinkTo class='link' @route='login'>Login</LinkTo>
+  </div>
+</div>
